@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaGithub, FaCode, FaLaptopCode, FaMobileAlt, FaMicrochip, FaDatabase } from "react-icons/fa";
 
-
 const projectData = [
   {
     title: "Hotel Reservation System",
@@ -62,32 +61,31 @@ const Projects = () => {
         }
       `}</style>
 
-      <section className="min-h-screen transition-colors duration-300 bg-white text-black dark:bg-[#0d1117] dark:text-white px-[5%] py-[100px]">
-        <div className="max-w-7xl mx-auto">
-          
-          
-          <div className="flex flex-col items-center mb-16 text-center">
-            <div className="inline-flex items-center gap-2.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 dark:text-indigo-300 text-sm font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full mb-6">
+      <section className="min-h-screen transition-colors duration-300 bg-white text-black dark:bg-[#0d1117] dark:text-white px-[5%] py-20 sm:py-24 md:py-[100px]">
+        <div className="max-w-[1700px] mx-auto">
+          <div className="flex flex-col items-center mb-14 sm:mb-16 text-center">
+            <div className="inline-flex items-center gap-2.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 dark:text-indigo-300 text-xs sm:text-sm font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full mb-6">
               <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-[ctPulse_2s_infinite]" />
               Portfolio Showcase
             </div>
-            <h1 className="text-5xl font-bold uppercase tracking-wider mb-6">
+
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-wider mb-6">
               Featured <span className="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">Projects</span>
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 text-xl leading-relaxed max-w-2xl mx-auto">
+
+            <p className="text-gray-600 dark:text-gray-400 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
               A collection of my work spanning web development, mobile apps, and systems engineering.
             </p>
           </div>
 
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-14 sm:mb-16">
             {["all", "web", "fullstack", "mobile", "iot"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-8 py-3 rounded-xl font-bold text-sm uppercase tracking-widest transition-all duration-300 border
-                  ${filter === cat 
-                    ? "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-transparent shadow-lg shadow-indigo-500/20 scale-105" 
+                className={`px-6 sm:px-8 py-3 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 border
+                  ${filter === cat
+                    ? "bg-gradient-to-r from-indigo-500 to-pink-500 text-white border-transparent shadow-lg shadow-indigo-500/20 scale-105"
                     : "bg-gray-100 dark:bg-slate-900/40 border-gray-200 dark:border-white/5 text-gray-600 dark:text-gray-400 hover:border-indigo-500/50"}`}
               >
                 {cat}
@@ -95,46 +93,42 @@ const Projects = () => {
             ))}
           </div>
 
-         
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-7 sm:gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="group relative bg-gray-50 dark:bg-slate-900/60 p-8 rounded-[30px] border border-gray-200 dark:border-white/5 hover:border-indigo-500/40 transition-all duration-500 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10"
+                className="group relative bg-gray-50 dark:bg-slate-900/60 p-8 sm:p-9 rounded-[28px] sm:rounded-[30px] border border-gray-200 dark:border-white/5 hover:border-indigo-500/40 transition-all duration-500 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 min-h-[340px] sm:min-h-[380px] flex flex-col"
               >
-                
                 <div className="flex justify-between items-start mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300">
                     {project.icon}
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em] px-3 py-1 bg-gray-200 dark:bg-white/5 rounded-lg text-gray-500">
+                  <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] px-3 py-1 bg-gray-200 dark:bg-white/5 rounded-lg text-gray-500">
                     {project.category}
                   </span>
                 </div>
 
-                <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-indigo-500 transition-colors">
+                <h2 className="font-display text-xl sm:text-2xl md:text-[26px] font-bold mb-4 text-gray-900 dark:text-white group-hover:text-indigo-500 transition-colors">
                   {project.title}
                 </h2>
 
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 h-12 line-clamp-2">
+                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
 
-                
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tech.map((t, i) => (
-                    <span key={i} className="text-[11px] font-bold text-blue-600 dark:text-blue-400 bg-blue-500/5 px-3 py-1 rounded-md border border-blue-500/10">
+                    <span key={i} className="text-xs sm:text-[13px] font-bold text-blue-600 dark:text-blue-400 bg-blue-500/5 px-3 py-1.5 rounded-md border border-blue-500/10">
                       {t}
                     </span>
                   ))}
                 </div>
 
-                
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-3 w-full py-4 bg-gray-900 dark:bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 text-white rounded-xl font-bold transition-all duration-300"
+                  className="flex items-center justify-center gap-3 w-full py-4 bg-gray-900 dark:bg-white/5 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 text-white rounded-xl font-bold text-sm sm:text-base transition-all duration-300"
                 >
                   <FaGithub size={18} /> View Source Code
                 </a>
