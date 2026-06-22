@@ -65,7 +65,7 @@ export default function Contact() {
 
       <section id="ct-section" className="min-h-screen transition-colors duration-300 bg-white text-black dark:bg-[#0f172a] dark:text-white px-[5%] py-[100px]">
         
-        {/* Header Section */}
+        
         <div className="flex flex-col items-center mb-20 text-center">
           <div className="inline-flex items-center gap-2.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 dark:text-indigo-300 text-sm font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full mb-6">
             <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-[ctPulse_2s_infinite]" />
@@ -81,7 +81,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-[50px]">
           
-          {/* Left Column: Contact Cards */}
+          
           <div className="flex flex-col gap-5">
             <p className="text-3xl font-extrabold mb-5 text-gray-900 dark:text-gray-100">
               Contact Information
@@ -96,11 +96,11 @@ export default function Contact() {
                    onMouseEnter={() => setHovCard(i)} onMouseLeave={() => setHovCard(null)}>
                   <div style={{ background: c.iconBg, color: c.iconColor }} className="w-[60px] h-[60px] rounded-[15px] flex items-center justify-center">{c.icon}</div>
                   <div>
-                    {/* ඉල්ලපු විදිහට: White, Bold, Larger Label */}
+                   
                     <div className="text-[18px] font-bold uppercase tracking-wider text-gray-900 dark:text-white">{c.label}</div>
-                    {/* Blue Value */}
+                    
                     <div className="text-[22px] font-semibold text-blue-600 dark:text-blue-400 my-1">{c.value}</div>
-                    {/* Light Purple Sub-text */}
+                    
                     <div className="text-[18px] text-indigo-400 dark:text-indigo-200">{c.sub}</div>
                   </div>
                 </a>
@@ -108,7 +108,7 @@ export default function Contact() {
             })}
           </div>
 
-          {/* Right Column: Form */}
+         
           <div className="bg-gray-50 dark:bg-slate-900/80 border border-gray-200 dark:border-white/5 rounded-[30px] p-[50px] h-fit">
             <p className="text-3xl font-extrabold mb-9 text-gray-900 dark:text-gray-100">
               Send a Message
@@ -121,7 +121,7 @@ export default function Contact() {
                   { id: "email", label: "Email", type: "email", ph: "email@example.com" },
                 ].map((input) => (
                   <div key={input.id}>
-                    {/* Form Labels: Bold & Larger */}
+                    
                     <label className="block text-[20px] font-extrabold mb-3 text-gray-900 dark:text-gray-100">{input.label}</label>
                     <div className={`flex items-center gap-4 px-6 py-[18px] bg-white dark:bg-slate-800/50 rounded-[15px] border transition-all duration-200 
                       ${focused === input.id ? 'border-indigo-500 ring-2 ring-indigo-500/20' : 'border-gray-200 dark:border-white/10'}`}>
@@ -162,7 +162,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Button Padding and Size restored to original */}
+              
               <button type="submit" className="w-full py-[22px] bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 border-none rounded-2xl text-white text-[20px] font-bold cursor-pointer flex items-center justify-center gap-[15px] transition-all duration-300 shadow-lg">
                 <FaPaperPlane size={20} /> Send Message
               </button>

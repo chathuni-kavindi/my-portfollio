@@ -18,7 +18,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   const navLinks = [
     { 
-      name: 'Home', to: '/#home', icon: <Home size={24} />, // Icon size increased to 24
+      name: 'Home', to: '/#home', icon: <Home size={24} />, 
       color: 'hover:bg-blue-600',
       animation: { scale: [1, 1.1, 1], transition: { repeat: Infinity, duration: 2 } } 
     },
@@ -45,7 +45,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         
-        {/* Logo Section (කලින් විදිහටමයි) */}
+        
         <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 group cursor-pointer">
           <div className="bg-gradient-to-tr from-blue-600 to-purple-600 p-2.5 rounded-xl shadow-lg text-white">
             <Sparkles size={22} />
@@ -55,7 +55,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </h1>
         </motion.div>
 
-        {/* Desktop Menu */}
+        
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link key={link.name} smooth to={link.to}>

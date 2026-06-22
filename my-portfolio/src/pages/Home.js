@@ -40,23 +40,28 @@ const Home = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#0d1117] transition-colors duration-300">
       
-      {/* Background Decorative Elements */}
+      
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full animate-pulse"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-pink-500/10 blur-[120px] rounded-full animate-pulse"></div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-6 sm:px-12 lg:px-20 py-20">
         
-        {/* Left Text Section */}
+       
         <div className="flex-1 text-center md:text-left order-2 md:order-1 mt-12 md:mt-0">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-300 text-xs font-black uppercase tracking-[0.2em] mb-6">
             <span className="w-2 h-2 rounded-full bg-indigo-500 animate-ping"></span>
             Welcome to my world
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black mb-6 leading-[1.1] tracking-tight">
-            <span className="text-gray-900 dark:text-white">Hii, I'm</span><br/>
+         
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-center md:text-left">
+            <span className="text-gray-900 dark:text-white">Hi, I'm</span>{' '}
             <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Chathuni
+            </span>
+            <br />
+            <span className="text-gray-800 dark:text-gray-200 text-4xl sm:text-5xl lg:text-7xl font-bold block mt-2">
+              Kavindi
             </span>
           </h1>
 
@@ -88,29 +93,33 @@ const Home = () => {
           <HeroButtons />
         </div>
 
-        {/* Right Image Section */}
+       
         <div className="flex-1 flex justify-center md:justify-end order-1 md:order-2">
-          <div className="relative">
-            {/* Animated Rotating Ring */}
-            <div className="absolute -inset-4 border-2 border-dashed border-indigo-500/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
-            <div className="absolute -inset-8 border border-pink-500/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+          <div className="relative flex items-center justify-center">
             
-            {/* Main Image Container */}
-            <div className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px] rounded-3xl overflow-hidden shadow-2xl group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+            <div className="absolute w-[290px] h-[290px] sm:w-[360px] sm:h-[360px] lg:w-[460px] lg:h-[460px] border-2 border-dashed border-pink-500/30 rounded-full animate-[spin_25s_linear_infinite]"></div>
+            <div className="absolute w-[320px] h-[320px] sm:w-[390px] sm:h-[390px] lg:w-[490px] lg:h-[490px] border border-indigo-500/20 rounded-full animate-[spin_20s_linear_infinite_reverse]"></div>
+            
+            <div className="absolute w-60 h-60 sm:w-72 sm:h-72 lg:w-[400px] lg:h-[400px] rounded-full bg-gradient-to-tr from-indigo-500/90 via-purple-500/80 to-pink-500/90 shadow-2xl"></div>
+            
+            <div className="relative z-10 w-60 h-64 sm:w-72 sm:h-80 lg:w-[400px] lg:h-[440px] overflow-hidden flex items-end group transition-transform duration-500 hover:scale-102">
                 <img 
-                  src="/profile.png" 
+                  src="/kavindi.png" 
                   alt="Chathuni Kavindi" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-auto object-contain max-h-full transition-transform duration-700 group-hover:scale-105"
                 />
             </div>
 
-            {/* Floating Badge (Optional) */}
-            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10 z-30 animate-bounce">
-                <p className="text-xs font-black dark:text-white uppercase tracking-widest text-center">3rd Year<br/><span className="text-indigo-500">ICT Undergrad</span></p>
+            <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-white/90 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-indigo-500/20 z-30 animate-bounce">
+                <p className="text-xs font-black dark:text-white uppercase tracking-widest text-center">
+                  3rd Year<br/>
+                  <span className="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">ICT Undergrad</span>
+                </p>
             </div>
+            
           </div>
         </div>
+
       </div>
     </div>
   );

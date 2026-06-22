@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaGithub, FaCode, FaLaptopCode, FaMobileAlt, FaMicrochip, FaDatabase } from "react-icons/fa";
 
-// 🌟 STEP 1 — Project Data
+
 const projectData = [
   {
     title: "Hotel Reservation System",
@@ -9,7 +9,7 @@ const projectData = [
     description: "A desktop application developed using C# and MySQL to manage rooms, bookings, customers, and invoices.",
     tech: ["C#", "MySQL", "WinForms"],
     icon: <FaDatabase />,
-    github: "https://github.com/YOURUSERNAME/hotel-system",
+    github: "https://github.com/ICT-Courses/application-development-ca1-chathuni-kavindi.git",
   },
   {
     title: "Portfolio Website",
@@ -17,7 +17,7 @@ const projectData = [
     description: "Personal portfolio built using React and Tailwind CSS with dark mode and responsive design.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     icon: <FaLaptopCode />,
-    github: "https://github.com/YOURUSERNAME/portfolio",
+    github: "https://github.com/chathuni-kavindi/my-portfollio.git",
   },
   {
     title: "Food Delivery Mobile App",
@@ -65,7 +65,7 @@ const Projects = () => {
       <section className="min-h-screen transition-colors duration-300 bg-white text-black dark:bg-[#0d1117] dark:text-white px-[5%] py-[100px]">
         <div className="max-w-7xl mx-auto">
           
-          {/* Header Section */}
+          
           <div className="flex flex-col items-center mb-16 text-center">
             <div className="inline-flex items-center gap-2.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 dark:text-indigo-300 text-sm font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full mb-6">
               <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-[ctPulse_2s_infinite]" />
@@ -79,7 +79,7 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Filter Buttons */}
+          
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             {["all", "web", "fullstack", "mobile", "iot"].map((cat) => (
               <button
@@ -95,14 +95,14 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Project Cards Grid */}
+         
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
                 className="group relative bg-gray-50 dark:bg-slate-900/60 p-8 rounded-[30px] border border-gray-200 dark:border-white/5 hover:border-indigo-500/40 transition-all duration-500 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10"
               >
-                {/* Icon & Category */}
+                
                 <div className="flex justify-between items-start mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                     {project.icon}
@@ -120,7 +120,7 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Tech Stack Tags */}
+                
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tech.map((t, i) => (
                     <span key={i} className="text-[11px] font-bold text-blue-600 dark:text-blue-400 bg-blue-500/5 px-3 py-1 rounded-md border border-blue-500/10">
@@ -129,7 +129,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* GitHub Link */}
+                
                 <a
                   href={project.github}
                   target="_blank"
