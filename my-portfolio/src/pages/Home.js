@@ -38,11 +38,11 @@ const HeroButtons = () => {
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#0d1117] transition-colors duration-300">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#0d1117] transition-colors duration-300 pt-32 sm:pt-36 pb-10">
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full animate-pulse"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-pink-500/10 blur-[120px] rounded-full animate-pulse"></div>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-[1700px] mx-auto px-6 sm:px-12 lg:px-20 py-20">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-[1700px] mx-auto px-6 sm:px-12 lg:px-20 py-10">
         <div className="flex-1 text-center md:text-left order-2 md:order-1 mt-12 md:mt-0">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-300 text-xs sm:text-sm font-black uppercase tracking-[0.2em] mb-6">
             <span className="w-2 h-2 rounded-full bg-indigo-500 animate-ping"></span>
