@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   FaEnvelope, FaPhoneAlt, FaWhatsapp,
-  FaMapMarkerAlt, FaPaperPlane, FaUser,
+  FaMapMarkerAlt, FaPaperPlane,
 } from "react-icons/fa";
 
 export default function Contact() {
